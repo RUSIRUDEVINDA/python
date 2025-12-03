@@ -1,7 +1,8 @@
+# this program can be used to shift subtitle timings in an SRT file
 import pysrt
 from datetime import timedelta
 
-path = r"C:\Users\Asus\Downloads\Supernatural-S15-E13\Supernatural [S15  E13]\Supernatural - 15x13 - Destiny's Child.POKE.English.C.orig.Addic7ed.com.srt"
+path = r"file_path.srt"
 
 print("Loading:", path)
 
@@ -17,8 +18,10 @@ for s in subs:
     s.start.ordinal += shift_ms
     s.end.ordinal += shift_ms
 
-output_file = "output_fixed(1).srt"
+output_file = "output_fixed.srt"
 subs.save(output_file, encoding="utf-8")
 
 print("Saved to:", output_file)
 print("Subtitle shift applied successfully!")
+
+
