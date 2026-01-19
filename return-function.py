@@ -19,7 +19,7 @@ def get_grade(marks, subject=None):
 grade = get_grade(78, "Maths")
 print(type(grade), grade)
 
-if grade:
+if grade: # checking if grade is not None or not False
     print("Grade ", grade)
 else:
     print("something went wrong")
