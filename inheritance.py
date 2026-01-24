@@ -19,7 +19,7 @@ class Dog(Animal):
         self.name = name
 
     def bark(self,message):
-        msg = f"This dog is named {self.name}.{message}"
+        msg = "This dog is named" + self.name + "." + message
         print(msg)  
 
     def walking(self):
